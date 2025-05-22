@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ocorrência</title>
+    <title>Turno</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 
@@ -73,24 +73,22 @@
     </nav>
 
     <div class="container mt-5">
-        <h2 class="mb-4">Tabela de Ocorrências</h2>
+        <h2 class="mb-4">Tabela de Turnos</h2>
         <table class="table">
             <thead>
                 <tr>
-                    <th scope="col">Descrição</th>
-                    <th scope="col">Data</th>
+                    <th scope="col">Nome</th>
                 </tr>
             </thead>
             <tbody>
-                {% for ocorrencia in ocorrencias %}
+                {% for turno in turnos %}
                 <tr>
-                    <td>{{ ocorrencia.descricao }}</td>
-                    <td>{{ ocorrencia.data }}</td>
+                    <td>{{ turno.nome }}</td>
                 </tr>
                 {% endfor %}
             </tbody>
         </table>
-    </div>    
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>

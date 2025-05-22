@@ -73,17 +73,19 @@
     </nav>
 
     <div class="container mt-5">
-        <h2 class="mb-4">Tabela de Áreas do Saber</h2>
+        <h2 class="mb-4">Tabela de Disciplinas</h2>
         <table class="table">
             <thead>
                 <tr>
-                    <th scope="col">Nome da Área</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Área do Conhecimento</th>
                 </tr>
             </thead>
             <tbody>
-                {% for area in areas %}
+                {% for disciplina in disciplinas %}
                 <tr>
-                    <td>{{ area.nome }}</td>
+                    <td>{{ disciplina.nome }}</td>
+                    <td>{{ disciplina.area_saber }}</td>
                 </tr>
                 {% endfor %}
             </tbody>

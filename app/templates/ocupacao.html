@@ -73,17 +73,17 @@
     </nav>
 
     <div class="container mt-5">
-        <h2 class="mb-4">Tabela de Áreas do Saber</h2>
+        <h2 class="mb-4">Tabela de Ocupações</h2>
         <table class="table">
             <thead>
                 <tr>
-                    <th scope="col">Nome da Área</th>
+                    <th scope="col">Profissão</th>
                 </tr>
             </thead>
             <tbody>
-                {% for area in areas %}
+                {% for ocupacao in ocupacoes %}
                 <tr>
-                    <td>{{ area.nome }}</td>
+                    <td>{{ ocupacao.nome }}</td>
                 </tr>
                 {% endfor %}
             </tbody>

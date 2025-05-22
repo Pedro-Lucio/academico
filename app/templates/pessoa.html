@@ -3,9 +3,12 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ocorrência</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width,
+initial-scale=1.0">
+    <title>Página Inicial</title>
+    <!-- Incluindo Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.
+min.css">
 </head>
 
 <body>
@@ -73,25 +76,38 @@
     </nav>
 
     <div class="container mt-5">
-        <h2 class="mb-4">Tabela de Ocorrências</h2>
+        <h2 class="mb-4">Tabela de Pessoas</h2>
         <table class="table">
             <thead>
                 <tr>
-                    <th scope="col">Descrição</th>
-                    <th scope="col">Data</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Nome do Pai</th>
+                    <th scope="col">Nome da Mãe</th>
+                    <th scope="col">CPF</th>
+                    <th scope="col">Data de Nascimento</th>
+                    <th scope="col">E-mail</th>
+                    <th scope="col">Cidade</th>
+                    <th scope="col">Profissão</th>
                 </tr>
             </thead>
             <tbody>
-                {% for ocorrencia in ocorrencias %}
+                {% for pessoa in pessoas %}
                 <tr>
-                    <td>{{ ocorrencia.descricao }}</td>
-                    <td>{{ ocorrencia.data }}</td>
+                    <td>{{ pessoa.nome }}</td>
+                    <td>{{ pessoa.nome_pai }}</td>
+                    <td>{{ pessoa.nome_mae }}</td>
+                    <td>{{ pessoa.cpf }}</td>
+                    <td>{{ pessoa.data_nasc }}</td>
+                    <td>{{ pessoa.email }}</td>
+                    <td>{{ pessoa.cidade }}</td>
+                    <td>{{ pessoa.ocupacao }}</td>
                 </tr>
                 {% endfor %}
             </tbody>
         </table>
-    </div>    
+    </div>
 
+    <!-- Incluindo jQuery e Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

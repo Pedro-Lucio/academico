@@ -73,17 +73,23 @@
     </nav>
 
     <div class="container mt-5">
-        <h2 class="mb-4">Tabela de Áreas do Saber</h2>
+        <h2 class="mb-4">Tabela de Cursos e Disciplinas</h2>
         <table class="table">
             <thead>
                 <tr>
-                    <th scope="col">Nome da Área</th>
+                    <th scope="col">Curso</th>
+                    <th scope="col">Disciplina</th>
+                    <th scope="col">Carga Horária (h)</th>
+                    <th scope="col">Período</th>
                 </tr>
             </thead>
             <tbody>
-                {% for area in areas %}
+                {% for item in cursos_disciplinas %}
                 <tr>
-                    <td>{{ area.nome }}</td>
+                    <td>{{ item.curso }}</td>
+                    <td>{{ item.disciplina }}</td>
+                    <td>{{ item.carga_horaria }}</td>
+                    <td>{{ item.periodo }}</td>
                 </tr>
                 {% endfor %}
             </tbody>

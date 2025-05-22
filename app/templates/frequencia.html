@@ -73,17 +73,19 @@
     </nav>
 
     <div class="container mt-5">
-        <h2 class="mb-4">Tabela de Áreas do Saber</h2>
+        <h2 class="mb-4">Tabela de Frequências</h2>
         <table class="table">
             <thead>
                 <tr>
-                    <th scope="col">Nome da Área</th>
+                    <th scope="col">Aluno</th>
+                    <th scope="col">Número de Faltas</th>
                 </tr>
             </thead>
             <tbody>
-                {% for area in areas %}
+                {% for frequencia in frequencias %}
                 <tr>
-                    <td>{{ area.nome }}</td>
+                    <td>{{ frequencia.pessoa }}</td>
+                    <td>{{ frequencia.numero_faltas }}</td>
                 </tr>
                 {% endfor %}
             </tbody>
